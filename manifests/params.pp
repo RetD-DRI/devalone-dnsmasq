@@ -5,7 +5,7 @@
 # @example
 #   include dnsmasq::params
 class dnsmasq::params {
-    case $::osfamily {
+    case $facts['os']['name'] {
     'Debian': {
       $package_name = 'dnsmasq'
       $service_name = 'dnsmasq'
